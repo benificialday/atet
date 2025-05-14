@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>비밀번호 보호 페이지</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 100px; }
+    input, button { padding: 10px; font-size: 16px; }
+    #error { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>비밀번호를 입력해주세요</h1>
+  <input type="password" id="pwd" placeholder="비밀번호">
+  <button onclick="checkPwd()">입력</button>
+  <p id="error"></p>
+
+  <script>
+    function checkPwd() {
+      var pwd = document.getElementById('pwd').value;
+      var correct = '1234'; // 원하는 비밀번호로 변경하세요
+      if (pwd === correct) {
+        window.location.href = 'https://chatgpt.com/g/g-6823542027c88191808a0ffbc4690af7-godanga-kiweodeu-japangi-caeti';
+      } else {
+        document.getElementById('error').textContent = '비밀번호가 올바르지 않습니다.';
+        document.getElementById('pwd').value = '';
+      }
+    }
+  </script>
+</body>
+</html>
